@@ -4,14 +4,21 @@ const { data } = Astro.props;
 
     
     <article>
-        <h2>{data.productdisplayname}</h2>
-        <p>DKK.{data.price},-</p>
-        <img src={`https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp`} alt={data.productdisplayname}>
+        <h2>{data.fornavn} {data.efternavn}</h2>
+        <p>{data.mobil}</p>
+      <img src={`https://fzvsyjniwgsfenppfica.supabase.co/storage/v1/object/public/images/${data.image}`} alt={data.image} />
+
     </article>
 
     <style>
         img{
             width: 100%;
             height: auto;
+        }
+        article {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
     </style>

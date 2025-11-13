@@ -3,8 +3,15 @@ import Layout from '../layouts/Layout.astro';
 const endpoint = "https://kea-alt-del.dk/t7/api/products?limit=100";
 import Cards from '../components/Cards.astro';
 
-const data = await fetch(endpoint).then((res) => res.json());
-console.log(data);
+
+const url = "https://fzvsyjniwgsfenppfica.supabase.co/rest/v1/people?select=*";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6dnN5am5pd2dzZmVucHBmaWNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMjU5MTQsImV4cCI6MjA3ODYwMTkxNH0.1Fz0xFVxwuXCg6O9EboLjAWCh8EVe9ZZcf7F1OuCgro";
+const option ={
+    headers: {
+        apikey: key,
+    },
+};
+const data = await fetch(url, option).then((res) => res.json());
 ---
 
 <Layout>
