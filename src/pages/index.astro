@@ -1,12 +1,18 @@
 ---
-
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import img1 from '../assets/fashion.webp';
 ---
 
 <Layout>
-	<h1>Forside</h1>
-
+  <img src={img1.src} alt="Fashion" />
 </Layout>
+
+<style>
+	img {
+	display: block;
+	margin: 2rem auto;
+	max-width: 600px;
+	width: 100%;
+	border-radius: 10px;
+  }
+</style>
